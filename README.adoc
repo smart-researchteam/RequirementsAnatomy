@@ -1,0 +1,67 @@
+= Formal Requirements Materials
+//-------------------------------------
+// Style and local definitions
+:toc: 
+:numbered:
+:imagesdir: images
+:icons: font
+:innopolis: https://university.innopolis.ru/en[Innopolis University]
+:utoulouse: https://en.univ-toulouse.fr[Toulouse University]
+:eveURL: http://se.inf.ethz.ch/research/eve/builds
+:eve: {eveURL}[Eiffel Verification Environment]
+:EiffelStudioURL: https://www.eiffel.com/eiffelstudio
+:EiffelStudio: {EiffelStudioURL}[EiffelStudio]
+:tools19: http://tools2019.innopolis.ru/[TOOLS 50+1]
+
+// icons for GitHub
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+//-------------------------------------
+
+WARNING: Work in progress!!
+
+== Context
+
+This repository collects useful material and pointers to use our definitions of:
+
+- categories of requirements
+- relationships between requirements
+
+These definitions coming from a joint effort between {innopolis} and {utoulouse} for adding formality in  requirements engineering.
+
+== Requirements corpus materials
+
+Here is the list of the current corpus we are using:
+
+* The Landing Gear System (LGS)
+** The link:https://www.irit.fr/ABZ2014/landing_system.pdf[Original PDF] description
+** A more usefull version (requirements can be referenced) described through a full link:https://mi-git.univ-tlse2.fr/ECb/LGS[repository]
+* The : link:LGS.adoc[]
+
+== Definitions
+
+The definitions are in progress but a stable version has been published at {tools19} and is available link:doc/Tools19.pdf[here].
+
+== Presentations and experiments
+
+These definitions have evolved according to the discussions and feedback from several talks in the last months:
+
+== Available material
+
+- Slides from B. Meyer
+- Slides from J.-M. Bruel
+- CheatSheet on the Categories
+- CheatSheet on the Relationships
+
+== Quizzes and experiments
+
+If you would like to contribute, please read the above slides and articles and when you believe you are ready, take your chance on the following quizzes:
+
+- Quiz on the categories
+- Quiz on the relationships
+

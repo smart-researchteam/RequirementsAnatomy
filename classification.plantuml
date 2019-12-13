@@ -1,0 +1,98 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+' Default settings
+'-----------------------------------
+' left to right direction 'does not work for sequence diagrams :-(
+'hide circle
+hide empty members
+hide methods	
+
+' Colors & Fonts
+'-----------------------------------
+'Colors => see http://plantuml.com/color
+'skinparam monochrome true
+'skinparam monochrome reverse
+'skinparam handwritten true
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam roundcorner 10
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+' PlantUML stdlib now includes Icon-Font Sprites! See https://github.com/tupadr3/plantuml-icon-font-sprites
+' see also https://tupadr3.de/plantuml-icon-font-sprites/
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v1.0.0
+
+'!include ../Defs.txt
+
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/font-awesome/server.puml
+!includeurl ICONURL/font-awesome/database.puml
+
+title Categories of Requirements
+
+' Attribute and name values (for translation purpose).
+'-----------------------------------
+!define RECT "Rectangle"
+!define SQUARE "Carré"
+'!define RECT "Rectangle"
+'!define SQUARE "Square"
+
+' Usefull functions
+'-----------------------------------
+!define objet(nom,type) class "<u>nom : type"
+
+
+package E as "E. Environment" {
+    class e1 as "E.1 Constraint" 
+}
+
+package S as "S. System" {
+    class s1 as "S.1 Behavior" 
+}
+
+package P as "P. Project" {
+    class p1 as "P.1 Task" 
+    class p2 as "P.2 Product" 
+    p1 -[hidden]> p2
+}
+
+package C as "C. Cross-cutting" {
+    class c1 as "C.1 Goal"
+    class c2 as "C.2 Component"
+    class c3 as "C.3 Role"
+    class c4 as "C.4 Limitation"
+}
+
+package M as "M. Meta" {
+    class m1 as "M.1 Lack"
+    class m2 as "M.2 Noise"
+    class m3 as "M.3 Meta-requirement"
+}
+E -[hidden]> S 
+S -[hidden]> P
+P -[hidden]-> C
+C -[hidden]> M
+
+@enduml
